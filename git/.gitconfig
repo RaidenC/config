@@ -3,3 +3,5 @@
 	email = ruidongc@gmail.com
 [alias]
 	lga = log --graph --oneline --all --decorate
+[credential]
+	helper = cache
