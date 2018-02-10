@@ -1,0 +1,5 @@
+[user]
+	name = RaidenC
+	email = ruidongc@gmail.com
+[alias]
+	lga = log --graph --oneline --all --decorate
