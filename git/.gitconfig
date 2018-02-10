@@ -5,3 +5,10 @@
 	lga = log --graph --oneline --all --decorate
 [credential]
 	helper = cache
+[core]
+	editor = vim
+	autocrlf = input
+[help]
+	autocorrect = 1
+[color]
+	ui = auto
