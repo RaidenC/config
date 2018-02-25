@@ -19,19 +19,73 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set language
+let $LANG='en' 
+set langmenu=en
+
+" Turn on the WiLd menu
+set wildmenu
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+" Always show current position
+set ruler
+
+" Show relative line number
+set nu
+set relativenumber
+
+" Height of the command bar
+set cmdheight=2
+
+" A buffer becomes hidden when it is abandoned
+set hid
+
+" Highlight search results
+set hlsearch
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" More natual split opening
+set splitbelow
+set splitright
+
+" Key mappings for easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+
+
 set nocompatible
 
-" Display relative line numbers
-set number
-set relativenumber
 
 syntax enable
 
 " Provides tab-completion for all file-related tasks
 set path+=**
-
-" Display all matching files when doing tab complete
-set wildmenu
 
 " Insert mode completion                         ins-completion  
 
