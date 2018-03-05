@@ -65,6 +65,10 @@ set incsearch
 set splitbelow
 set splitright
 
+" Key mappings for create split
+nnoremap <leader>v :sp<cr>
+nnoremap <leader>s :vs<cr>
+
 " Key mappings for easier split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -84,6 +88,9 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
+
+" Set color Scheme
+colorscheme default
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -136,6 +143,23 @@ map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => wiki
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let wiki = {}
+let wiki.path = '~/wiki/'
+
+let g:vimwiki_list = [wiki]
+
+" open wiki in a split window
+nmap <leader>we <Plug>VimwikiVSplitLink
+
+" open wiki in a verticle split window
+nmap <leader>wq <Plug>VimwikiSplitLink
+
+" Toggle checkbox of a list item on/off
+map <leader>tt <Plug>VimwikiToggleListItem
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Automatic installation 
@@ -151,6 +175,8 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins. 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
 
 " List ends here. Plugins become visible to Vim after this call. 
 call plug#end()
