@@ -21,6 +21,7 @@ nmap <leader>w :w!<cr>
 
 
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -80,6 +81,7 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+
 
 
 
@@ -143,23 +145,6 @@ map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => wiki
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let wiki = {}
-let wiki.path = '~/wiki/'
-
-let g:vimwiki_list = [wiki]
-
-" open wiki in a split window
-nmap <leader>we <Plug>VimwikiVSplitLink
-
-" open wiki in a verticle split window
-nmap <leader>wq <Plug>VimwikiSplitLink
-
-" Toggle checkbox of a list item on/off
-map <leader>tt <Plug>VimwikiToggleListItem
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Automatic installation 
@@ -175,8 +160,26 @@ call plug#begin('~/.vim/plugged')
 " Declare the list of plugins. 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
+Plug 'tpop/vim-surround'
+Plug 'vimwiki/vimwiki'
+let wiki = {}
+let wiki.path = '~/wiki/'
+
+let g:vimwiki_list = [wiki]
+
+" open wiki in a split window
+nmap <leader>we <Plug>VimwikiVSplitLink
+
+" open wiki in a verticle split window
+nmap <leader>wq <Plug>VimwikiSplitLink
+
+" Toggle checkbox of a list item on/off
+map <leader>tt <Plug>VimwikiToggleListItem
+
+Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
+
 
 " List ends here. Plugins become visible to Vim after this call. 
 call plug#end()
