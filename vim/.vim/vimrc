@@ -166,21 +166,32 @@ call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins. 
 Plug 'editorconfig/editorconfig-vim'
+
 Plug 'scrooloose/nerdtree'
+" open NERDTree by default
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Toggle NERDTree
+nnoremap <Leader>f :NERDTreeToggle<cr>
+" Close when opened a file
+let NERDTreeQuitOnOpen = 1
+" Close when all file closed
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" UI
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 Plug 'mattn/calendar-vim'
+
 Plug 'tpop/vim-surround'
+
 Plug 'vimwiki/vimwiki'
 let wiki = {}
 let wiki.path = '~/wiki/'
-
 let g:vimwiki_list = [wiki]
-
 " open wiki in a split window
 nmap <leader>we <Plug>VimwikiVSplitLink
-
 " open wiki in a verticle split window
 nmap <leader>wq <Plug>VimwikiSplitLink
-
 " Toggle checkbox of a list item on/off
 map <leader>tt <Plug>VimwikiToggleListItem
 
