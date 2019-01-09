@@ -127,6 +127,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# titlebar / border
+new_window normal
+for_window [class="^.*"] border pixel 1
+hide_edge_borders both
+
 # System colors
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
