@@ -64,9 +64,9 @@ URxvt*foreground: #657b83
 URxvt*background: #002b36
 
 ! Monaco Linux font
-URxvt.font: xft:Go Mono for Powerline:pixelsize=13
-URxvt.boldFont: xft:Go Mono Bold or Powerline:pixelsize=13:weight=bold
-URxvt.letterSpace: -1
+URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=15
+URxvt.boldFont: xft:Ubuntu Mono derivative Powerline Bold:pixelsize=15:weight=bold
+URxvt.letterSpace: 0
 
 ! scrollbar - true (default) or false
 URxvt*scrollBar: false
