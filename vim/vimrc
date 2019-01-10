@@ -165,7 +165,9 @@ endif
 call plug#begin('~/.vim/plugged')  
 
 " Declare the list of plugins. 
+
 Plug 'editorconfig/editorconfig-vim'
+
 
 Plug 'scrooloose/nerdtree'
 " open NERDTree by default
@@ -180,9 +182,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " UI
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+
 Plug 'mattn/calendar-vim'
 
-Plug 'tpop/vim-surround'
 
 Plug 'vimwiki/vimwiki'
 let wiki = {}
@@ -195,9 +198,13 @@ nmap <leader>wq <Plug>VimwikiSplitLink
 " Toggle checkbox of a list item on/off
 map <leader>tt <Plug>VimwikiToggleListItem
 
+
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
 
+
+Plug 'junegunn/goyo.vim'
+nmap <leader>c :Goyo<cr>
 
 " List ends here. Plugins become visible to Vim after this call. 
 call plug#end()
