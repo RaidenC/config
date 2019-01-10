@@ -150,6 +150,11 @@ map <leader>sa zg
 map <leader>s? z=
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autocmd
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run xrdb whenever Xresources or Xdefaults are updated.
+autocmd BufWritePost ~/.Xresources,~/.Xdefaults !xrdb %
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
