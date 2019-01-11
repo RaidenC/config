@@ -1,0 +1,31 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {
+        "terminal.ansiBlue": "#5f819d",
+        "terminal.ansiBrightBlue": "#81a2be",
+        "terminal.ansiRed": "#a54242",
+        "terminal.ansiBrightRed": "#cc6666",
+        "terminal.ansiYellow": "#de935f",
+        "terminal.ansiBrightYellow": "#f0c674",
+        "terminal.ansiGreen": "#8c9440",
+        "terminal.ansiBrightGreen": "#b5bd68",
+        "terminal.ansiCyan": "#538d87",
+        "terminal.ansiBrightCyan": "#8abeb7",
+        "terminal.ansiMagenta": "#85678f",
+        "terminal.ansiBrightMagenta": "#b294bb"
+    },
+
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "default",
+
+    "files.autoSave": "afterDelay",
+
+    "zenMode.hideStatusBar": false,
+
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.enableBell": false
+}
